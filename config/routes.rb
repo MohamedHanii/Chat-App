@@ -6,4 +6,9 @@ Rails.application.routes.draw do
   #Login Route
   get 'login', to: 'sessions#new'
 
+
+  resources :users
+
+  resources :messages
+  
 end
