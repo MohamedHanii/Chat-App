@@ -1,7 +1,7 @@
 class MessagesController < ApplicationController
     before_action :require_user
     def create
-        message = Message.new
+   
         message = current_user.messages.build(message_params)
         if message.save
             # this function take hash

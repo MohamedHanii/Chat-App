@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-before_action :logged_in_redirect, only: [:new, :create]
+    before_action :logged_in_redirect, only: [:new, :create]
 
     #show login form
     def new 
@@ -23,13 +23,15 @@ before_action :logged_in_redirect, only: [:new, :create]
     end
 
     def destroy
-        session[:uer_id] = nil
+        session[:user_id] = nil
         flash[:success] = "You have successfully logged out"
+        
         redirect_to login_path
     end
 
 
     private 
+
     def logged_in_redirect
         if logged_in?
             flash[:error] = "You are already logged in"

@@ -4,7 +4,7 @@ class ChatroomController < ApplicationController
     # Rendering home page
     def index
         @message = Message.new
-        @messages = Message.all
+        @messages = Message.custom_display
     end
 
 
