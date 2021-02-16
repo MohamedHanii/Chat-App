@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+ 
   #Root Route
   root 'chatroom#index'
  
@@ -14,6 +15,6 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources :messages
+  post 'message', to: 'messages#create'
 
 end
